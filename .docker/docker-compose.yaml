@@ -17,4 +17,4 @@ services:
       - mongodb_config:/data/configdb
 volumes:
   mongodb:
-  Mongodb_config:
+  mongodb_config:
