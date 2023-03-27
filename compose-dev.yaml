@@ -10,11 +10,11 @@ services:
       - /project/node_modules
   back:
     build:
-      context: code
+      context: crud-with-mongodb
     ports:
       - 3001:3001
     volumes:
-      - ./code:/code
+      - ./crud-with-mongodb:/code
   db:
     image: mongo:4.2.8
     ports:
