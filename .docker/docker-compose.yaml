@@ -9,13 +9,12 @@ services:
       - ./app:/project
       - /project/node_modules
   db:
-    mongo:
-      image: mongo:4.2.8
-      ports:
-        - 27017:27017
-      volumes:
-        - mongodb:/data/db
-        - mongodb_config:/data/configdb
+    image: mongo:4.2.8
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
 volumes:
   mongodb:
   Mongodb_config:
