@@ -1,8 +1,7 @@
+const cors = require('cors'); 
 const express = require("express");
 const blogRouter = require("./routes/BlogRoutes");
-const app = express();
-
-
+const app = express();app.use(cors());
 
 const mongoose = require("mongoose");
 
