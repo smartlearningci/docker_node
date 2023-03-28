@@ -5,37 +5,28 @@ services:
       target: builder
     ports:
       - 4200:4200
+      - 3001:3001
     volumes:
       - ./app:/project
       - /project/node_modules
-    networks:
-      - blog-net
   back:
     build:
       context: crud-with-mongodb
     ports:
       - 3001:3001
+      - 4200:4200
     volumes:
       - ./crud-with-mongodb:/code
-    networks:
-      - blog-net
   db:
     image: mongo:4.2.8
     ports:
       - 27017:27017
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: antonio
-      MONGO_INITDB_ROOT_PASSWORD: blog
-      MONGO_INITDB_ROOT_DATABASE: blogdb
     volumes:
       - mongodb:/data/db
       - mongodb_config:/data/configdb
 volumes:
   mongodb:
   mongodb_config:
-networks:
-  blog-net:
-    driver: bridge
     
 
 
