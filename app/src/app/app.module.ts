@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,6 +21,7 @@ import { IndexPostPipe } from './index-post.pipe';
 import { IndexPostPipePipe } from './pipe/index-post-pipe.pipe';
 import { ResetPasswordComponent } from './views/reset-password/reset-password.component';
 import { LoginComponent } from './views/login/login.component';
+import { HttpdemoComponent } from './views/httpdemo/httpdemo.component';
 
 @NgModule({
   declarations: [
@@ -39,11 +41,13 @@ import { LoginComponent } from './views/login/login.component';
     IndexPostPipe,
     IndexPostPipePipe,
     ResetPasswordComponent,
-    LoginComponent
+    LoginComponent,
+    HttpdemoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule,
   ],
   providers: [],

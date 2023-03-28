@@ -7,6 +7,7 @@ import { BlogPostViewComponent } from './views/blog-post-view/blog-post-view.com
 import { Pagina404Component } from './view/pagina404/pagina404.component';
 import { ResetPasswordComponent } from './views/reset-password/reset-password.component';
 import { LoginComponent } from './views/login/login.component';
+import { HttpdemoComponent } from './views/httpdemo/httpdemo.component';
 
 const routes: Routes = [
   
@@ -16,6 +17,7 @@ const routes: Routes = [
     { path: 'blogpost/:id/:seoTitulo', title: "Post do António", component: BlogPostViewComponent},
     { path: 'reset-password', title: "Reset Password", component: ResetPasswordComponent}, 
     { path: 'login', title: "Login", component: LoginComponent},
+    { path: 'httpdemo', title: "HttpDemo", component: HttpdemoComponent},
 
 
     { path: '**', title: "404", component: Pagina404Component}
